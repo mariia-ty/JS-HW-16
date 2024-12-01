@@ -1,21 +1,20 @@
-function Storage(items) {
-  this.items = items; // Simply store the array directly
-}
-
-Storage.prototype.getItems = function () {
-  return this.items;
-};
-
-Storage.prototype.addItem = function (item) {
-  this.items.push(item); // Adding an item to the array
-};
-
-Storage.prototype.removeItem = function (item) {
-  const index = this.items.indexOf(item);
-  if (index !== -1) {
-    this.items.splice(index, 1); // Removing an item from the array
+class Storage {
+  constructor(items) {
+    this.items = items;
   }
-};
+  getItems() {
+    return this.items;
+  }
+  addItem(item) {
+    this.items.push(item);
+  }
+  removeItem(item) {
+    const index = this.items.indexOf(item);
+    if (index !== -1) {
+      this.items.splice(index, 1);
+    }
+  }
+}
 
 const storage = new Storage([
   "Нанітоіди",

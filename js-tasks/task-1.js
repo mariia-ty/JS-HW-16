@@ -1,14 +1,12 @@
-function Account({ login, email }) {
-    this.login = login; 
-    this.email = email; 
-}
-
-Account.prototype.getInfo = function () {
+class Account {
+  constructor({ login, email }) {
+    this.login = login;
+    this.email = email;
+  }
+  getInfo() {
     console.log(`Login: ${this.login} Email: ${this.email}`);
-    
-};
-
-console.log(Account.prototype.getInfo); // function
+  }
+}
 
 const mango = new Account({
   login: "Mangozedog",

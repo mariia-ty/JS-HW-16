@@ -1,28 +1,14 @@
-// class User {
-//     constructor(name, age, followers) {
-//         this.name = name;
-//         this.age = age;
-//         this.followers = followers;
-//     }
-//     getInfo() {
-//         console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers`);
+class User {
+    constructor({name, age, followers}) {
+        this.name = name;
+        this.age = age;
+        this.followers = followers;
+    }
+    getInfo() {
+        console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers`);
 
-//     }
-// };
-
-function User({ name, age, followers }) {
-  this.name = name;
-  this.age = age;
-  this.followers = followers;
-}
-
-User.prototype.getInfo = function () {
-  console.log(
-    `User ${this.name} is ${this.age} years old and has ${this.followers} followers`
-  );
+    }
 };
-
-console.log(User.prototype.getInfo); // function
 
 const mango = new User({
   name: "Mango",
